@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2115 - koncert </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+  body {
+    font-family: 'Kanit', sans-serif;
+  }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            color: rgb(255, 255, 255);
+        }
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        h1 {
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-family: Kanit ;
+            font-size: 4cm;
+
+        }
+        form {
+            margin: 20px 0;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"] {
+            width: 100%;
+            padding: 5px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+        
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: red;
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: hsl(56, 100%, 35%);
+        }
+
+        .checkbox-group label {
+            display: block;
+            margin-top: 5px;
+        }
+
+        #snippet {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay loop muted poster="2115.png">
+        <source src="ketchup1080.mp4" type="video/mp4">
+        </video>
+    <div class="container" style="font-family: OCR A Dt, Kanit;">
+
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="21.png" alt="Opis obrazka">
+            <img src="https://see.fontimg.com/api/renderfont4/Yjrv/eyJyIjoiZnMiLCJoIjoxNzUsInciOjEwMDAsImZzIjoxNzUsImZnYyI6IiNGN0Y3RjciLCJiZ2MiOiIjMUYxRjFGIiwidCI6MX0/S09OQ0VSVCA/bosthon-brush.png" alt="Paintbrush fonts">
+          </div>
+        
+        <form action="mailto:mich4l.ost4sz@gmail.com" method="post">
+            <label for="Imie">Imię i nazwisko:</label>
+            <input type="text" id="Imie" name="Imie" required>
+
+            <label for="email">Adres e-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefon">Numer telefonu:</label>
+            <input type="tel" id="telefon" name="telefon" required>
+
+            <label for="bilety-ilosc">Ilość biletów:</label>
+            <input type="number" id="bilety-ilosc" name="bilety-ilosc" required>
+
+            <label for="koncert-data">Data koncertu:</label>
+            <select id="koncert-data" name="koncert-data" required>
+                <option value="2022-09-02">2 września 2022</option>
+                <option value="2022-09-08">8 września 2022</option>
+                <option value="2022-09-09">9 września 2022</option>
+                <option value="2022-09-10">10 września 2022</option>
+                <option value="2022-09-15">15 września 2022</option>
+                <option value="2022-09-16">16 września 2022</option>
+            </select>
+
+            <label for="snippet">Piosenki do usłyszenia (wybór wielokrotny CTRL+LPM):</label>
+            <select id="snippet" name="snippet" multiple="multiple">
+                <option value="Ketchup" data-audio="KETCHUP.mp3">Ketchup</option>
+                <option value="Weekend 2115" data-audio="WEEKEND 2115.mp3">Weekend 2115</option>
+                <option value="Turysta" data-audio="TURYSTA.mp3">Turysta</option>
+                <option value="Bedoesiara" data-audio="BEDOESIARA.mp3">Bedoesiara</option>
+                <option value="Jagiełło" data-audio="JAGIEŁŁO.mp3">Jagiełło</option>
+                <option value="SKIT" data-audio="WHITE_2115_SKIT.mp3">SKIT</option>
+            </select>
+
+            <div id="snippet-preview">
+                Wybrane piosenki do usłyszenia:
+            </div>
+
+            
+            <label for="żarcie">Co byś zjadł/a ?</label>
+            <select id="żarcie" name="żarcie">
+                <option value="nic">Nic</option>
+                <option value="burgir">Burgir</option>
+                <option value="pizzka">Pizzka</option>
+                <option value="gorący pies">Gorący pies</option>
+                <option value="frytki">Frytki</option>
+             </select>
+            
+            <label for="chlanie">Co chcesz przechylić ?</label>
+            <select id="chlanie" name="chlanie">
+                <option value="brak">Nic, siedzisz na sucho</option>
+                <option value="cola">Czarny, gazowany napój</option>
+                <option value="Woda">Woda - zdrowy człowiek</option>
+                <option value="Piwo">Piwo, moje paliwo...</option>
+                <option value="Wóda">Wujitsu - dobry zawodnik</option>
+            </select>
+
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" name="zgoda" required>
+                    Wyrażam zgodę na przetwarzanie dadnych osobowych.
+                </label>
+            </div>
+
+            <label for="uwagi">Masz jakiś problem? Pisz:</label>
+            <textarea id="uwagi" name="uwagi" rows="5"></textarea>
+
+            <button type="submit">Zatwierdź zgłoszenie</button>
+        </form>
+    </div>
+    <script>
+        const snippetSelect = document.getElementById("snippet");
+        const snippetPreview = document.getElementById("snippet-preview");
+
+       snippetSelect.addEventListener("change", () => {
+            snippetPreview.innerHTML = "Odsłuch:<br>";
+
+            for (const option of snippetSelect.options) {
+                if (option.selected) {
+                    const snippet = option.text;
+                    const audioSrc = option.getAttribute("data-audio");
+                    snippetPreview.innerHTML += snippet + '<audio controls><source src="' + audioSrc + '" type="audio/mp3"></audio><br>';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+                
