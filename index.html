@@ -69,17 +69,23 @@
             border-radius: 5px;
         }
 
-        button {
-            background-color: red;
-            color: rgb(255, 255, 255);
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
+        .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        width: 100%; 
+        max-width: 200px;
         }
-
-        button:hover {
-            background-color: hsl(56, 100%, 35%);
+        .button:hover {
+        transform: scale(1.1);
+        background-color: #ff4d4d;
         }
 
         .checkbox-group label {
@@ -102,6 +108,13 @@
             <img src="21.png" alt="Opis obrazka">
             <img src="https://see.fontimg.com/api/renderfont4/Yjrv/eyJyIjoiZnMiLCJoIjoxNzUsInciOjEwMDAsImZzIjoxNzUsImZnYyI6IiNGN0Y3RjciLCJiZ2MiOiIjMUYxRjFGIiwidCI6MX0/S09OQ0VSVCA/bosthon-brush.png" alt="Paintbrush fonts">
           </div>
+        <header>
+<div class="header-buttons">
+    <a href="index.html" class="button">Start</a>
+    <a href="projekty.html" class="button">Projekty</a>
+    <a href="kontakt.html" class="button">Kontakt</a>
+</div>
+</header>
         
         <form action="mailto:mich4l.ost4sz@gmail.com" method="post">
             <label for="Imie">Imię i nazwisko:</label>
